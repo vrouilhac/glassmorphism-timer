@@ -1,6 +1,6 @@
 var startTime = null; // e.g. 12:00 in milliseconds
 var currentTime = null; // e.g. 12:20 in milliseconds
-var timer = 5 * 1000//15 * 60 * 1000; // e.g. 30min in milliseconds, default: 15 min
+var timer = 15 * 60 * 1000; // e.g. 30min in milliseconds, default: 15 min
 var interval = null;
 
 function playAudio() {
@@ -17,7 +17,7 @@ function checkEnd() {
 }
 
 function getRemaining() {
-	if (Number.isNaN(startTime) || Number.isNaN(currentTime) || Number.isNaN(timer)) {
+	if (Number.isNaN(startTime) || Number.isNaN(currentTime) || Number.isNaN(timer)) {
 		console.error("Error: Something went bad");
 		return 0;
 	}
@@ -29,7 +29,7 @@ function getRemaining() {
 }
 
 function timerToParts() {
-	if (Number.isNaN(startTime) || Number.isNaN(currentTime) || Number.isNaN(timer)) {
+	if (Number.isNaN(startTime) || Number.isNaN(currentTime) || Number.isNaN(timer)) {
 		console.error("Error: Something went bad");
 
 		return {
@@ -212,7 +212,7 @@ function initSmallBtns() {
 					break;
 			}
 
-			if(timer > 0 || diff > 0) {
+			if(timer > 0 || diff > 0) {
 				if((timer + diff) < 0) {
 					timer = 0;
 				} else {
