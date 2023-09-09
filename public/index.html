@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Glassmorphism Timer</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div></div>
+    <main>
+      <div id="main-container" class="row">
+        <div id="mg" class="row">
+          <p id="md">0</p>
+          <p id="mu">0</p>
+        </div>
+        <p>:</p>
+        <div id="sg" class="row">
+          <p id="sd">0</p>
+          <p id="su">0</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="button" id="start-btn">Start</button>
+        <button class="button hidden" id="resume-btn">Resume</button>
+        <button class="button hidden" id="pause-btn">Pause</button>
+        <button class="button hidden" id="stop-btn">Stop</button>
+      </div>
+
+      <div class="row">
+        <button class="button-small" data-time="-30">-30:00</button>
+        <button class="button-small" data-time="-15">-15:00</button>
+        <button class="button-small" data-time="-5">-5:00</button>
+        <button class="button-small" data-time="+5">+5:00</button>
+        <button class="button-small" data-time="+15">+15:00</button>
+        <button class="button-small" data-time="+30">+30:00</button>
+      </div>
+    </main>
+
+    <audio id="audio" controls src="/bell-sound.wav" prelaod="auto"></audio>
+    <script src="/index.js"></script>
+  </body>
+</html>
